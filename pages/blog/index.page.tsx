@@ -304,8 +304,8 @@ export default function StaticMarkdownPage({
                                 <div
                                   key={index}
                                   className={`bg-slate-50 rounded-full -ml-3 bg-cover bg-center border-2 border-white ${frontmatter.authors.length > 2
-                                      ? 'h-8 w-8'
-                                      : 'h-11 w-11'
+                                    ? 'h-8 w-8'
+                                    : 'h-11 w-11'
                                     }`}
                                   style={{
                                     backgroundImage: `url(${author.photo})`,
