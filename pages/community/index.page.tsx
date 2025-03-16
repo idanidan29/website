@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { getLayout } from '~/components/SiteLayout';
 import { SectionContext } from '~/context';
 import imageData from '~/data/community-users.json';
@@ -52,9 +52,14 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export default function communityPages(props: any) {
+export default function CommunityPages(props: any) {
+  const [isClient, setIsClient] = useState(false);
   const blogPosts = props.blogPosts;
   const timeToRead = Math.ceil(readingTime(blogPosts[0].content).minutes);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   return (
     <SectionContext.Provider value='community'>
@@ -204,7 +209,6 @@ export default function communityPages(props: any) {
             <div className='w-full h-fit-content md:w-3/6  flex rounded-r-lg justify-end bg-cover bg-center bg-slack' />
           </div>
         </div>
-
         <div className='m-auto w-12/12 md:w-11/12 lg:w-10/12 xl:w-10/12'>
           <div className='z-40 mt-20 w-full rounded-lg border border-gray-200 bg-white group dark:bg-slate-800 hover:dark:bg-slate-900/30 shadow-3xl dark:shadow-2xl dark:shadow-slate-900 transition-colors hover:bg-slate-100 md:flex grid grid-cols-1 lg:grid-cols-2 justify-between'>
             <div className='p-4 px-8 grid items-center w-full md:w-3/6 h-auto flex-col text-center md:text-left'>
@@ -388,9 +392,181 @@ export default function communityPages(props: any) {
             </div>
           </div>
         </div>
+        <div className='m-auto w-12/12 md:w-11/12 lg:w-10/12 xl:w-10/12'>
+          <div className='z-40 mt-20 rounded-lg border border-gray-200 bg-white transition-colors hover:bg-slate-100 dark:bg-slate-800 hover:dark:bg-slate-900/30 shadow-3xl dark:shadow-2xl dark:shadow-slate-900'>
+            <div className='grid grid-cols-1 lg:grid-cols-2'>
+              <div className='p-8 flex flex-col justify-center text-center'>
+                <h2 className='text-blue-700 font-bold text-[2rem] text-center'>
+                  Our Generous Sponsors
+                </h2>
+                <h2 className='text-slate-500 text-base tracking-wide dark:text-white mt-10 font-bold text-body-lg tracking-body font-regular'>
+                  <p className='text-gray-600 dark:text-gray-300 mb-8 text-center mt-4'>
+                    JSON Schema is supported by an amazing community of
+                    sponsors.
+                    <br />
+                    Their contributions help sustain and grow our ecosystem.
+                  </p>
+                </h2>
+                <div className='mt-4 flex justify-center'>
+                  <a
+                    href='https://opencollective.com/json-schema'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200'
+                  >
+                    Support Our Project
+                  </a>
+                </div>
+              </div>
+              <div className='p-8 rounded-r-lg border-l dark:border-slate-700'>
+                <div className='grid grid-cols-2 md:grid-cols-3 gap-4 items-center'>
+                  {/* Row 1 */}
+                  <a
+                    href='https://www.asyncapi.com/'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    {isClient && (
+                      <Image
+                        src='/img/logos/sponsors/asyncapi-logo-dark.svg'
+                        className='w-44 h-auto max-h-20 object-contain'
+                        width={176}
+                        height={100}
+                        alt='AsyncAPI logo'
+                      />
+                    )}
+                  </a>
+                  <a
+                    href='https://www.airbnb.com/'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    {isClient && (
+                      <Image
+                        src='/img/logos/sponsors/airbnb-logo.png'
+                        className='w-44 h-auto max-h-20 object-contain'
+                        width={176}
+                        height={100}
+                        alt='Airbnb logo'
+                      />
+                    )}
+                  </a>
+                  <a
+                    href='https://www.postman.com/'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    {isClient && (
+                      <Image
+                        src='/img/logos/sponsors/postman_logo-orange.svg'
+                        className='w-44 h-auto max-h-20 object-contain'
+                        width={176}
+                        height={100}
+                        alt='Postman logo'
+                      />
+                    )}
+                  </a>
+
+                  {/* Row 2 */}
+                  <a
+                    href='https://endjin.com/'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    {isClient && (
+                      <Image
+                        src='/img/logos/sponsors/endjin-logo.svg'
+                        className='w-44 h-auto max-h-20 object-contain'
+                        width={176}
+                        height={100}
+                        alt='Endjin logo'
+                      />
+                    )}
+                  </a>
+                  <a
+                    href='https://www.llc.org/'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    {isClient && (
+                      <Image
+                        src='/img/logos/sponsors/llc-logo.svg'
+                        className='w-44 h-auto max-h-20 object-contain'
+                        width={176}
+                        height={100}
+                        alt='Linux Foundation logo'
+                      />
+                    )}
+                  </a>
+                  <a
+                    href='https://www.vpsserver.com/en-us/'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    {isClient && (
+                      <Image
+                        src='/img/logos/sponsors/vps-server-logo.svg'
+                        className='w-44 h-auto max-h-20 object-contain'
+                        width={176}
+                        height={100}
+                        alt='VPSServer logo'
+                      />
+                    )}
+                  </a>
+
+                  {/* New Logos - Row 3 */}
+                  <a
+                    href='https://www.itflashcards.com/'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    {isClient && (
+                      <Image
+                        src='/img/logos/sponsors/it_flashcards.svg'
+                        className='w-44 h-auto max-h-20 object-contain'
+                        width={176}
+                        height={100}
+                        alt='IT Flashcards logo'
+                      />
+                    )}
+                  </a>
+                  <a
+                    href='https://www.route4me.com/'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    {isClient && (
+                      <Image
+                        src='/img/logos/sponsors/route4me-logo-white.svg'
+                        className='w-44 h-auto max-h-20 object-contain'
+                        width={176}
+                        height={100}
+                        alt='Route4Me logo'
+                      />
+                    )}
+                  </a>
+                  <a href='https://n8n.io/' target='_blank' rel='noreferrer'>
+                    {isClient && (
+                      <Image
+                        src='/img/logos/sponsors/n8n-logo-white.svg'
+                        className='w-44 h-auto max-h-20 object-contain'
+                        width={176}
+                        height={100}
+                        alt='n8n logo'
+                      />
+                    )}
+                  </a>
+                </div>
+                <p className='text-center text-sm mt-6 text-gray-500 dark:text-gray-400 pt-4'>
+                  Want to see your logo here? Become a sponsor!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </SectionContext.Provider>
   );
 }
 
-communityPages.getLayout = getLayout;
+CommunityPages.getLayout = getLayout;
