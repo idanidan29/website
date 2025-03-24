@@ -249,8 +249,8 @@ const Home = (props: any) => {
             </p>
           </div>
           {/* Feature 4 section*/}
-          <div className='w-5/6 lg:w-3/5 grid grid-cols-1 md:grid-cols-2 gap-6   my-[85px] mx-auto '>
-            <div className='w-full  shadow-3xl  rounded-[10px] p-[20px] dark:shadow-slate-700'>
+          <div className='w-5/6 lg:w-3/5 grid grid-cols-1 md:grid-cols-2 gap-6 my-[85px] mx-auto'>
+            <div className='w-full border-2 border-transparent shadow-3xl rounded-[10px] p-[20px] dark:shadow-slate-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-primary dark:hover:border-slate-600'>
               <h3 className='text-h5mobile md:text-h5 font-semibold mb-6 dark:text-slate-200'>
                 Streamline testing and validation
               </h3>
@@ -261,7 +261,8 @@ const Home = (props: any) => {
                 invalid data.
               </p>
             </div>
-            <div className='w-full  shadow-3xl  rounded-[10px] p-[20px] dark:shadow-slate-700'>
+
+            <div className='w-full border-2 border-transparent shadow-3xl rounded-[10px] p-[20px] dark:shadow-slate-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-primary dark:hover:border-slate-600'>
               <h3 className='text-h5mobile md:text-h5 font-semibold mb-6 dark:text-slate-200'>
                 Exchange data seamlessly
               </h3>
@@ -273,7 +274,8 @@ const Home = (props: any) => {
                 platforms.
               </p>
             </div>
-            <div className='w-full  shadow-3xl  rounded-[10px] p-[20px] dark:shadow-slate-700'>
+
+            <div className='w-full border-2 border-transparent shadow-3xl rounded-[10px] p-[20px] dark:shadow-slate-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-primary dark:hover:border-slate-600'>
               <h3 className='text-h5mobile md:text-h5 font-semibold mb-6 dark:text-slate-200 '>
                 Document your data
               </h3>
@@ -283,7 +285,8 @@ const Home = (props: any) => {
                 stakeholders, and collaborators.
               </p>
             </div>
-            <div className='w-full  shadow-3xl  rounded-[10px] p-[20px] dark:shadow-slate-700'>
+
+            <div className='w-full border-2 border-transparent shadow-3xl rounded-[10px] p-[20px] dark:shadow-slate-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-primary dark:hover:border-slate-600'>
               <h3 className='text-h5mobile md:text-h5 font-semibold mb-6 dark:text-slate-200'>
                 Vibrant tooling ecosystem
               </h3>
