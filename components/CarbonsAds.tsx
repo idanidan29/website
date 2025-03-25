@@ -150,6 +150,7 @@ CarbonAds.stylesheet = {
 
     .dark #carbonads .carbon-wrap {
       background-color: #0f172a !important;
+      border-color: rgb(51 65 85) !important;
     }
 
     .dark #carbonads a:hover {
